@@ -1,7 +1,7 @@
 import config from "@/plugins/config";
 import qs from 'qs';
 
-export default function ({ app, $axios, redirect }) {
+export default function ({ app, $axios, redirect }, inject) {
   const API = {};
   API.newReleaseList = function (params) {
     return $axios({
@@ -31,7 +31,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/unauth/tissuechip/autoComplateQuery`,
       method: 'post',
-      params: data,
+      data: data,
     })
   };
 
@@ -67,7 +67,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/unauth/tissuechip/list`,
       method: 'post',
-      params: data,
+      data: data,
     })
   };
 
@@ -85,7 +85,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/unauth/tissuesection/list`,
       method: 'post',
-      params: data,
+      data: data,
     })
   };
 
@@ -112,7 +112,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/unauth/tissuechip/comparativeRepeatRecord`,
       method: 'post',
-      params: data,
+      data: data,
     })
   };
 
@@ -131,7 +131,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/auth/shoppingcart/addToShoppingCart`,
       method: 'post',
-      params: data,
+      data: data,
     /*  headers: {
         'token': Authorization
       }*/
@@ -143,7 +143,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/auth/login`,
       method: 'post',
-      params: data,
+      data: data,
     })
   };
 
@@ -152,7 +152,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/auth/logout`,
       method: 'post',
-      params: data,
+      data: data,
     })
   };
 
@@ -173,7 +173,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/auth/register`,
       method: 'post',
-      params: data,
+      data: data,
       /*  headers: {
           'token': Authorization
         }*/
@@ -185,7 +185,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/auth/editMyInfo`,
       method: 'post',
-      params: data,
+      data: data,
       /*  headers: {
           'token': Authorization
         }*/
@@ -197,7 +197,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/auth/password`,
       method: 'post',
-      params: data,
+      data: data,
       /*  headers: {
           'token': Authorization
         }*/
@@ -221,7 +221,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/auth/shoppingcart/editShoppingNum`,
       method: 'post',
-      params: data,
+      data: data,
       /*  headers: {
           'token': Authorization
         }*/
@@ -233,7 +233,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/auth/shoppingcart/delete`,
       method: 'post',
-      params: data,
+      data: data,
       /*  headers: {
           'token': Authorization
         }*/
@@ -245,7 +245,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/auth/shoppingcart/getByIds`,
       method: 'post',
-      params: data,
+      data: data,
       /*  headers: {
           'token': Authorization
         }*/
@@ -269,7 +269,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/auth/address/save`,
       method: 'post',
-      params: data,
+      data: data,
       /*  headers: {
           'token': Authorization
         }*/
@@ -281,7 +281,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/auth/address/update`,
       method: 'post',
-      params: data,
+      data: data,
       /*  headers: {
           'token': Authorization
         }*/
@@ -293,7 +293,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/auth/address/info/${id}`,
       method: 'post',
-      params: data,
+      data: data,
       /*  headers: {
           'token': Authorization
         }*/
@@ -305,7 +305,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/auth/address/delete`,
       method: 'post',
-      params: data,
+      data: data,
       /*  headers: {
           'token': Authorization
         }*/
@@ -317,7 +317,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/auth/order/submitOrder`,
       method: 'post',
-      params: data,
+      data: data,
       /*  headers: {
           'token': Authorization
         }*/
@@ -329,7 +329,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/auth/order/list`,
       method: 'post',
-      params: data,
+      data: data,
       /*  headers: {
           'token': Authorization
         }*/
@@ -341,7 +341,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/auth/order/remove`,
       method: 'post',
-      params: data,
+      data: data,
       /*  headers: {
           'token': Authorization
         }*/
@@ -353,7 +353,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/unauth/contactUs`,
       method: 'post',
-      params: data,
+      data: data,
       /*  headers: {
           'token': Authorization
         }*/
@@ -365,7 +365,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/auth/order/info/${id}`,
       method: 'post',
-      params: data,
+      data: data,
       /*  headers: {
           'token': Authorization
         }*/
@@ -388,7 +388,7 @@ export default function ({ app, $axios, redirect }) {
     return $axios({
       url: config.baseUrl+`/auth/resetPassword`,
       method: 'post',
-      params: data,
+      data: data,
       /*  headers: {
           'token': Authorization
         }*/
@@ -396,5 +396,5 @@ export default function ({ app, $axios, redirect }) {
   };
 
   app.api = API;
-  //inject('api',API);
+  inject('api',API);
 }

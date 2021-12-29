@@ -5,5 +5,6 @@ export default {
   slideLabelPath: baseUrl+'/unauth/SlideImage/label',
   //说明页芯片图像显示
   chipBaseImagePath: baseUrl+'/unauth/SlideImage/thumbnailQcode',
-  shareLinkImage: baseUrl +"/qrcode/getQRCode?content="
+  shareLinkImage: baseUrl +"/qrcode/getQRCode?content=",
+  slideViewerBaseUrl: "http://pathomics.banlan.cloud/"
 }

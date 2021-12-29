@@ -13,12 +13,17 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { src: 'https://hm.baidu.com/hm.js?226b65ae837d1f83df2c6cdcb02415e4' }
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    'view-design/dist/styles/iview.css'
+    'view-design/dist/styles/iview.css',
+    '@/assets/css/style.less',
+    '@/assets/css/table.less'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -26,9 +31,14 @@ export default {
     '@/plugins/view-ui',
     "@/plugins/api",
     "@/plugins/config",
-    "@/libs/axios"
+    "@/libs/axios",
+    '@/plugins/baidu'
   ],
-
+  //loading: false,
+  loading: {
+    color: '#4aa6fc',
+    height: '2px'
+  },
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 

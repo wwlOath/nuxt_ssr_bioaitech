@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!--<ContactSideBarontactSideBar/>-->
+    <ContactSideBar/>
     <footer class="default-footer" style="min-width:1200px;">
     <div class="container">
       <div style="height:220px;text-align: center">
@@ -32,7 +32,7 @@
   </div>
 </template>
 
-<style>
+<style lang="less">
   .container {
     max-width: 1300px !important;
     width: 100%;
@@ -63,6 +63,9 @@
   .bottom-footer {
     background: #000;
     padding: 10px 0;
+    a {
+      color: #2d8cf0;
+    }
   }
   .bottom-footer p {
     margin-bottom: 0;
